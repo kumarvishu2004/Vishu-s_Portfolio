@@ -1,0 +1,162 @@
+/* ── Section layout ── */
+.section {
+  padding: 100px 5%;
+}
+
+.section--alt {
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.section__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section__tag {
+  display: inline-block;
+  background: rgba(255, 106, 0, 0.13);
+  border: 1px solid rgba(255, 106, 0, 0.3);
+  color: var(--orange);
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  font-family: var(--font-mono);
+}
+
+.section__title {
+  font-size: clamp(30px, 5vw, 52px);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.section__title span { color: var(--orange); }
+
+.section__sub {
+  color: var(--text-muted);
+  max-width: 500px;
+  margin: 14px auto 0;
+  line-height: 1.8;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+/* ── Cards ── */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px 28px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.card:hover {
+  border-color: rgba(255, 106, 0, 0.4);
+  transform: translateY(-6px);
+}
+
+/* ── Tech pill ── */
+.tech-pill {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: #bbb;
+}
+
+/* ── Orange text ── */
+.text-orange { color: var(--orange); }
+
+/* ── Glow circle ── */
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  background: linear-gradient(135deg, var(--orange), var(--pink));
+  border: none;
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-family: var(--font-main);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(255, 106, 0, 0.4);
+}
+
+/* ── Footer ── */
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 32px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer__logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--orange);
+  letter-spacing: 3px;
+}
+
+.footer__copy {
+  color: #555;
+  font-size: 13px;
+  font-family: var(--font-mono);
+}
+
+.footer__links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer__link {
+  color: #555;
+  font-size: 13px;
+  cursor: none;
+  font-family: var(--font-mono);
+  transition: color 0.2s;
+}
+
+.footer__link:hover { color: var(--orange); }
+
+/* Download CV button in footer */
+.footer__cv-btn {
+  display: inline-block;
+  border: 1.5px solid var(--orange);
+  color: var(--orange);
+  padding: 9px 20px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-family: var(--font-main);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+.footer__cv-btn:hover {
+  background: var(--orange);
+  color: #fff;
+  transform: translateY(-2px);
+}

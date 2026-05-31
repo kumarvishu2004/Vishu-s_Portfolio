@@ -1,0 +1,146 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 5%;
+  background: rgba(13, 13, 13, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 106, 0, 0.12);
+}
+
+.navbar__logo {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--orange);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: none;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.navbar__link {
+  color: var(--text-dim);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  cursor: none;
+  transition: color 0.2s;
+  text-transform: uppercase;
+  font-family: var(--font-main);
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--orange);
+}
+
+.navbar__hire-btn {
+  background: linear-gradient(135deg, var(--orange), var(--pink));
+  border: none;
+  color: #fff;
+  padding: 10px 26px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-family: var(--font-main);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.navbar__hire-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(255, 106, 0, 0.4);
+}
+
+.navbar__mobile-toggle {
+  display: none;
+  background: none;
+  border: 1px solid rgba(255, 106, 0, 0.4);
+  color: var(--orange);
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: none;
+  font-size: 18px;
+}
+
+.navbar__mobile-menu {
+  position: fixed;
+  top: 70px; left: 0; right: 0;
+  background: var(--bg2);
+  z-index: 999;
+  padding: 20px 5%;
+  border-bottom: 1px solid rgba(255, 106, 0, 0.2);
+}
+
+.navbar__mobile-item {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #ccc;
+  font-weight: 600;
+  cursor: none;
+  font-family: var(--font-main);
+}
+
+.navbar__mobile-item--active { color: var(--orange); }
+
+@media (max-width: 768px) {
+  .navbar__links,
+  .navbar__hire-btn { display: none; }
+  .navbar__mobile-toggle { display: block; }
+}
+
+/* Download CV button in navbar */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar__cv-btn {
+  display: inline-block;
+  border: 1.5px solid var(--orange);
+  color: var(--orange);
+  padding: 9px 20px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-family: var(--font-main);
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+.navbar__cv-btn:hover {
+  background: var(--orange);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.navbar__mobile-cv {
+  display: block;
+  margin-top: 14px;
+  padding: 12px 0;
+  color: var(--orange);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-family: var(--font-main);
+  text-decoration: none;
+  text-align: center;
+  border: 1.5px solid var(--orange);
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .navbar__actions { display: none; }
+}

@@ -1,0 +1,30 @@
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.service-card__icon {
+  font-size: 38px;
+  margin-bottom: 16px;
+}
+
+.service-card__title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.service-card__desc {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.7;
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 768px) {
+  .services__grid { grid-template-columns: 1fr; }
+}
